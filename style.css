@@ -3,11 +3,13 @@ body {
   background-color: #f9f9f9;
   padding: 30px;
   color: #333;
+  text-align: center;
 }
 
 a {
   color: #0077cc;
   text-decoration: none;
+  text-align: center;
 }
 
 h1 {
