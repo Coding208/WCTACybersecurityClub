@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cyber Training Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="banner-wrapper">
+  <img src="matrixcodebanner.jpg" alt="Banner" class="banner-img">
+<div class="navbar">
+ <div class="logo-group">
+    <img src="logo.jpg" alt="Logo" class="navbar-logo">
+    <span class="logo-text"> WCTA Cybersecurity Club </span>
+  </div>
+
+  <div class="navbar-links">
+    <a href="index.html">Home</a>
+    <a href="cyberpatriot.html">CyberPatriot</a>
+    <a href="ncl.html">NCL</a>
+
+    <div class="search-container">
+      <button id="search-toggle">
+        <img src="MG.png" alt="Search" style="width: 30px; height: 30px; border-radius: 15px; margin: 10px">
+      </button>
+      <form id="search-form">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <div class="banner-title">
+    <h1>CyberPatriot</h1>
+  </div>
+
+<script>
+  document.getElementById('search-toggle').addEventListener('click', function () {
+    const form = document.getElementById('search-form');
+    form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
+</body>
+</html>
