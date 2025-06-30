@@ -38,7 +38,7 @@
 </div>
 
 <div class="main-content">
-  <div class="left-text">
+  <div id="searchable-content" class="left-text">
     <h2>CyberPatriot (The National Youth Cyber Defense Competition)</h2>
     <p>CyberPatriot is a national cybersecurity competition where student teams act as IT administrators tasked with securing virtual machines. Each round challenges us to identify vulnerabilities, harden systems, and maintain critical services under time pressure.</p>
 
@@ -50,6 +50,11 @@
     <p>The National Cyber League is a collegiate and high school cybersecurity competition where individuals and teams solve real-world challenges in cryptography, open-source intelligence (OSINT), network traffic analysis, log analysis, password cracking, and more.</p>
   </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="calendar-container">
   <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FLos_Angeles&mode=AGENDA&showTabs=0&showNav=0&showCalendars=0&showTz=0&src=Y18zZGRmYTBiNDU3ZDlkNTI2Y2I5MjE5OGRjMTA0YThlNTYzYjE0YWE5MTg3YmM2NzQzYmJiOGU1ZThjNjQ0MDM0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23d81b60"
@@ -60,10 +65,43 @@
 </div>
 </div>
 
+  <div class="corps">
+      <img src="cyberpatriot.png" style:"height= 400px; width= 400px">
+      <img src="ncl.png" style:"height= 400px; width= 500px">
+    </div>
+<br>
+<hr>
+<p style="display: flex; text-align: center; justify-content: center;"> Website Built by President David Slowik </p>
+
 <script>
+  // Toggle search bar visibility (your existing code)
   document.getElementById('search-toggle').addEventListener('click', function () {
     const form = document.getElementById('search-form');
     form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Search within the content and highlight matches
+  document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const query = this.querySelector('input[type="text"]').value.trim().toLowerCase();
+    const contentDiv = document.getElementById('searchable-content');
+
+    if (!query) {
+      // Clear highlights by resetting content (remove mark tags)
+      contentDiv.innerHTML = contentDiv.textContent;
+      return;
+    }
+
+    // Escape special regex characters
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
+
+    // Replace matching text with highlighted <mark> tags
+    const originalText = contentDiv.textContent;
+    const highlightedText = originalText.replace(regex, '<mark>$1</mark>');
+
+    contentDiv.innerHTML = highlightedText;
   });
 </script>
 </body>
