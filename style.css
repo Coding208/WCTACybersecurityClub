@@ -105,6 +105,7 @@ body, html {
   text-align: center;
   padding-top: 40px; 
   font-size: 2em;
+  font-family: Marker Felt, fantasy;
 }
 
 .main-content {
@@ -122,6 +123,7 @@ body, html {
   font-family: sans-serif;
   font-size: 1.3em;
   color: #333;
+  font-family: Marker Felt, fantasy;
 }
 
 .calendar-container {
@@ -137,3 +139,18 @@ body, html {
   border: 1px solid #777;
 
 }
+
+.corps { 
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+} 
+
+mark {
+  background-color: #ffeb3b;
+  color: black;
+  padding: 0 3px;
+}
+
+
