@@ -4,16 +4,67 @@
   <title>Cyber Training Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="navbar">
+
+<div class="banner-wrapper">
+  <img src="matrixcodebanner.jpg" alt="Banner" class="banner-img">
+<div class="navbar">
+ <div class="logo-group">
+    <img src="logo.jpg" alt="Logo" class="navbar-logo">
+    <span class="logo-text"> WCTA Cybersecurity Club </span>
+  </div>
+
+  <div class="navbar-links">
     <a href="index.html">Home</a>
     <a href="cyberpatriot.html">CyberPatriot</a>
     <a href="ncl.html">NCL</a>
+
+    <div class="search-container">
+      <button id="search-toggle">
+        <img src="MG.png" alt="Search" style="width: 30px; height: 30px; border-radius: 15px; margin: 10px">
+      </button>
+      <form id="search-form">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+  </div>
+</div>
+  
+  <div class="banner-title">
+    <h1>WCTA Cybersecurity Club</h1>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="left-text">
+    <h2>CyberPatriot (The National Youth Cyber Defense Competition)</h2>
+    <p>CyberPatriot is a national cybersecurity competition where student teams act as IT administrators tasked with securing virtual machines. Each round challenges us to identify vulnerabilities, harden systems, and maintain critical services under time pressure.</p>
+
+<br>
+<hr>
+<br>
+
+    <h2>National Cyber League (NCL)</h2>
+    <p>The National Cyber League is a collegiate and high school cybersecurity competition where individuals and teams solve real-world challenges in cryptography, open-source intelligence (OSINT), network traffic analysis, log analysis, password cracking, and more.</p>
   </div>
 
-  <div class="content">
-    <h1>Welcome to the Cybersecurity Training Hub</h1>
-    <p>Guides, tips, and resources for CyberPatriot and NCL.</p>
-  </div>
+
+<div class="calendar-container">
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FLos_Angeles&mode=AGENDA&showTabs=0&showNav=0&showCalendars=0&showTz=0&src=Y18zZGRmYTBiNDU3ZDlkNTI2Y2I5MjE5OGRjMTA0YThlNTYzYjE0YWE5MTg3YmM2NzQzYmJiOGU1ZThjNjQ0MDM0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23d81b60"
+    style="border:solid 1px #777"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</div>
+</div>
+
+<script>
+  document.getElementById('search-toggle').addEventListener('click', function () {
+    const form = document.getElementById('search-form');
+    form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
 </body>
 </html>
