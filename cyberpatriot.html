@@ -35,6 +35,53 @@
   <div class="banner-title">
     <h1>CyberPatriot</h1>
   </div>
+</div>
+
+<div class="cyber-section">
+  <div class="left-text">
+    <h2>CyberPatriot How to Succeed</h2>
+    <p>
+      To succeed in CyberPatriot, it's essential to practice regularly with Windows, Linux, and networking challenges. 
+      Understand the scoring engine, review past images, and build strong teamwork and communication. 
+      Focus on learning how to harden systems, secure user accounts, and troubleshoot services quickly. 
+      The more hands-on time you spend with real virtual machines, the more confident and effective your team will be during competition rounds.
+    </p>
+  </div>
+
+  <img src="cyber2.png" alt="CyberPatriot Logo" class="cyber-image">
+</div>
+
+<div class="dropdown-section">
+  <button class="dropdown-toggle" style="margin-top: 50px">Windows</button>
+  <div class="dropdown-content">
+    <p>Guides and tips for securing Windows 10/11 in CyberPatriot competitions. Includes account policies, services, updates, and Group Policy.</p>
+  </div>
+
+  <button class="dropdown-toggle">Windows Server</button>
+  <div class="dropdown-content">
+    <p>Instructions for Active Directory, Group Policy Objects, role management, and DNS/DHCP configuration in Windows Server environments.</p>
+  </div>
+
+  <button class="dropdown-toggle">Linux</button>
+  <div class="dropdown-content">
+    <p>Common commands and steps for securing Ubuntu/Debian systems — user auditing, service hardening, and file permission checking.</p>
+  </div>
+
+  <button class="dropdown-toggle">Packet Tracer</button>
+  <div class="dropdown-content">
+    <p>Tips for Cisco Packet Tracer networking scenarios: VLANs, routing protocols, subnetting, and troubleshooting simulations.</p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
 
 <script>
   document.getElementById('search-toggle').addEventListener('click', function () {
