@@ -21,6 +21,7 @@ body, html {
   height: 55px;
   margin-right: 0px;
 }
+
 .logo-group {
   display: flex;
   align-items: center;
@@ -35,13 +36,18 @@ body, html {
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 15px; /* spacing between links and search */
+  gap: 15px;
 }
 
 .navbar-links a {
   color: white;
   text-decoration: none;
   padding: 14px 8px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffeb3b;
 }
 
 .search-container {
@@ -63,7 +69,7 @@ body, html {
   display: none; /* hidden by default */
   flex-direction: row;
   align-items: center;
-  margin-left: 10px; /* spacing from button */
+  margin-left: 10px;
 }
 
 #search-form input[type="text"] {
@@ -99,12 +105,14 @@ body, html {
 }
 
 .banner-title {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   color: white;
   text-align: center;
-  padding-top: 40px; 
-  font-size: 2em;
+  font-size: 2.5em;
   font-family: Marker Felt, fantasy;
 }
 
@@ -112,7 +120,6 @@ body, html {
   display: flex;
   justify-content: space-between;
   font-family: Marker Felt, fantasy;
-
 }
 
 .left-text {
@@ -128,21 +135,19 @@ body, html {
   display: flex;
   justify-content: flex-end;
   padding: 40px;
-
 }
 
 .calendar-container iframe {
   width: 700px;
   height: 600px;
   border: 1px solid #777;
-
 }
 
 .corps { 
   display: flex;
   text-align: center;
   justify-content: center;
-
+  gap: 20px;
 } 
 
 mark {
@@ -189,8 +194,25 @@ mark {
   height: auto;
   border-radius: 10px;
   margin-right: 400px;
-  margin-top: 50px
+  margin-top: 50px;
+}
+/* Only style download links */
+.download-link:link,
+.download-link:visited {
+  color: #007bff; /* blue color */
+  text-decoration: none;
 }
 
+.download-link:hover {
+  color: #0056b3; /* darker blue on hover */
+}
 
+.download-link:active {
+  color: #003f7f; /* click color */
+}
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 8px;
+}
 
