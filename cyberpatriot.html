@@ -8,29 +8,29 @@
 <body>
 
 <div class="banner-wrapper">
-  <img src="matrixcodebanner.jpg" alt="Banner" class="banner-img">
-<div class="navbar">
- <div class="logo-group">
-    <img src="logo.jpg" alt="Logo" class="navbar-logo">
-    <span class="logo-text"> WCTA Cybersecurity Club </span>
-  </div>
+  <img src="Images/matrixcodebanner.jpg" alt="Banner" class="banner-img">
+  <div class="navbar">
+    <div class="logo-group">
+      <img src="Images/logo.jpg" alt="Logo" class="navbar-logo">
+      <span class="logo-text"> WCTA Cybersecurity Club </span>
+    </div>
 
-  <div class="navbar-links">
-    <a href="index.html">Home</a>
-    <a href="cyberpatriot.html">CyberPatriot</a>
-    <a href="ncl.html">NCL</a>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="cyberpatriot.html">CyberPatriot</a>
+      <a href="ncl.html">NCL</a>
 
-    <div class="search-container">
-      <button id="search-toggle">
-        <img src="MG.png" alt="Search" style="width: 30px; height: 30px; border-radius: 15px; margin: 10px">
-      </button>
-      <form id="search-form">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Go</button>
-      </form>
+      <div class="search-container">
+        <button id="search-toggle" aria-label="Toggle search">
+          <img src="Images/MG.png" alt="Search" style="width: 30px; height: 30px; border-radius: 15px; margin: 10px">
+        </button>
+        <form id="search-form">
+          <input type="text" placeholder="Search...">
+          <button type="submit">Go</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="banner-title">
     <h1>CyberPatriot</h1>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="cyber-section">
-  <div class="left-text">
+  <div id="searchable-content" class="left-text">
     <h2>CyberPatriot How to Succeed</h2>
     <p>
       To succeed in CyberPatriot, it's essential to practice regularly with Windows, Linux, and networking challenges. 
@@ -48,18 +48,34 @@
     </p>
   </div>
 
-  <img src="cyber2.png" alt="CyberPatriot Logo" class="cyber-image">
+  <img src="Images/cyber2.png" alt="CyberPatriot Logo" class="cyber-image">
 </div>
 
 <div class="dropdown-section">
   <button class="dropdown-toggle" style="margin-top: 50px">Windows</button>
   <div class="dropdown-content">
-    <p>Guides and tips for securing Windows 10/11 in CyberPatriot competitions. Includes account policies, services, updates, and Group Policy.</p>
+    <p>These are the current checklists & resources we have for Windows. Please aknowledge all of them:</p>
+  <div class="file-block">
+        <a href="Windows_&_Server_Resource_files/CyberPat_Checklist.pdf" target="_blank" download class="download-link">Windows Checklist 1</a> </br>
+        <a href="Windows_&_Server_Resource_files/JP Checklist.pdf" target="_blank" download class="download-link">Windows Checklist 2</a> </br>
+        <a href="Windows_&_Server_Resource_files/Cyber_Patriot_Windows_10_Server_Checklist.pdf" target="_blank" download class="download-link">Windows Checklist 3</a> </br>
+        <a href="Windows_&_Server_Resource_files/Windows checklist OT.pdf" target="_blank" download class="download-link">Windows Checklist 4</a> </br>
+        <a href="Windows_&_Server_Resource_files/Windows 11 Practice Round Step By Step.pdf" target="_blank" download class="download-link">Windows 11 Practice round step-by-step 1</a> </br>
+        <a href="Windows_&_Server_Resource_files/WindowsChecklist1.pdf" target="_blank" download class="download-link">Windows/Windows Server Checklist 1</a> </br>
+        <a href="CyberPatriot-Windows-Checklist.pdf" target="_blank" download class="download-link">Windows/Windows Server Checklist 2</a> </br>
+      </div>
+	</br><p>Disclaimer: *It is not a 100% chance that everything said in these checklists will work, know what you are doing or what commands you are enterening before you do it. Do not blindly follow.*</p>
   </div>
 
   <button class="dropdown-toggle">Windows Server</button>
   <div class="dropdown-content">
-    <p>Instructions for Active Directory, Group Policy Objects, role management, and DNS/DHCP configuration in Windows Server environments.</p>
+    <p>These are the current checklists & resources we have for Windows Server. Please aknowledge all of them:</p>
+ <div class="file-block">
+        <a href="Windows_&_Server_Resource_files/System Hardening Outline - Windows 10, Server 2016.pdf" target="_blank" download class="download-link">Windows Server Checklist 1</a> </br>
+        <a href="Windows_&_Server_Resource_files/WindowsChecklist1.pdf" target="_blank" download class="download-link">Windows/Windows Server Checklist 1</a> </br>
+        <a href="Windows_&_Server_Resource_files/CyberPatriot-Windows-Checklist.pdf" target="_blank" download class="download-link">Windows/Windows Server Checklist 2</a> </br>
+      </div>
+	</br><p>Disclaimer: *It is not a 100% chance that everything said in these checklists will work, know what you are doing or what commands you are enterening before you do it. Do not blindly follow.*</p>
   </div>
 
   <button class="dropdown-toggle">Linux</button>
@@ -69,24 +85,56 @@
 
   <button class="dropdown-toggle">Packet Tracer</button>
   <div class="dropdown-content">
-    <p>Tips for Cisco Packet Tracer networking scenarios: VLANs, routing protocols, subnetting, and troubleshooting simulations.</p>
+    <p>Current Guides, commands, and other valuable for Packet tracer:</p>
+<div class="file-block">
+        <a href="Packet_Resource_files/Intro to Packet Tracer-20250915T063513Z-1-001.zip" target="_blank" download class="download-link">Intro to Packet Tracer</a> </br>
+        <a href="Packet_Resource_files/Packet Tracer Overview.pdf" target="_blank" download class="download-link">Packet Tracer Overview</a> </br>
+        <a href="Packet_Resource_files/Packet Tracer Resources.pdf" target="_blank" download class="download-link">Packet Tracer VALUABLE Resources</a> </br>
+        <a href="Packet_Resource_files/Packet Tracer Command List.pdf" target="_blank" download class="download-link">Packet Tracer Command List</a> </br>
+        <a href="Packet_Resource_files/Cyberpatriot Packet Tracer Round 2 Reference Doc.pdf" target="_blank" download class="download-link">Packet Tracer Guides</a> </br>
+        <a href="Packet_Resource_files/Round-2-Labs.zip" target="_blank" download class="download-link">Round-2-Labs.zip (From the Guides pdf)</a> </br>
+        <a href="Packet_Resource_files/Packet Tracer Labs (Capstone)-20250915T064720Z-1-001.zip" target="_blank" download class="download-link">More Labs</a> </br>
+      </div>
+	</br><p>Disclaimer: *It is not a 100% chance that everything said in these checklists will work, know what you are doing or what commands you are enterening before you do it. Do not blindly follow.*</p>
   </div>
 </div>
 
+<br>
+<hr>
+<p style="display: flex; text-align: center; justify-content: center;"> Website Built by President David Slowik </p>
+
 <script>
+  // Dropdown toggle
   document.querySelectorAll('.dropdown-toggle').forEach(button => {
     button.addEventListener('click', () => {
       const content = button.nextElementSibling;
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
   });
-</script>
 
+  // Search functionality (same as index.html)
+  const contentDiv = document.getElementById('searchable-content');
+  const originalHTML = contentDiv.innerHTML;
 
-<script>
   document.getElementById('search-toggle').addEventListener('click', function () {
     const form = document.getElementById('search-form');
     form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const query = this.querySelector('input[type="text"]').value.trim().toLowerCase();
+
+    if (!query) {
+      contentDiv.innerHTML = originalHTML;
+      return;
+    }
+
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
+
+    contentDiv.innerHTML = originalHTML.replace(regex, '<mark>$1</mark>');
   });
 </script>
 </body>
