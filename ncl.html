@@ -1,46 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cyber Training Hub</title>
+  <title>Cyber Training Hub - NCL</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="banner-wrapper">
-  <img src="matrixcodebanner.jpg" alt="Banner" class="banner-img">
-<div class="navbar">
- <div class="logo-group">
-    <img src="logo.jpg" alt="Logo" class="navbar-logo">
-    <span class="logo-text"> WCTA Cybersecurity Club </span>
+  <img src="Images/matrixcodebanner.jpg" alt="Banner" class="banner-img">
+  <div class="navbar">
+    <div class="logo-group">
+      <img src="Images/logo.jpg" alt="Logo" class="navbar-logo">
+      <span class="logo-text"> WCTA Cybersecurity Club </span>
+    </div>
+
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="cyberpatriot.html">CyberPatriot</a>
+      <a href="ncl.html">NCL</a>
+
+      <div class="search-container">
+        <button id="search-toggle" aria-label="Toggle search">
+          <img src="Images/MG.png" alt="Search" style="width: 30px; height: 30px; border-radius: 15px; margin: 10px">
+        </button>
+        <form id="search-form">
+          <input type="text" placeholder="Search...">
+          <button type="submit">Go</button>
+        </form>
+      </div>
+    </div>
   </div>
 
-  <div class="navbar-links">
-    <a href="index.html">Home</a>
-    <a href="cyberpatriot.html">CyberPatriot</a>
-    <a href="ncl.html">NCL</a>
-
-    <div class="search-container">
-      <button id="search-toggle">
-        <img src="MG.png" alt="Search" style="width: 30px; height: 30px; border-radius: 15px; margin: 10px">
-      </button>
-      <form id="search-form">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Go</button>
-      </form>
-    </div>
+  <div class="banner-title">
+    <h1>National Cyber League</h1>
   </div>
 </div>
 
-  <div class="banner-title">
-    <h1>NCL</h1>
+<div class="cyber-section">
+  <div id="searchable-content" class="left-text">
+    <h2>NCL How to Succeed</h2>
+    <p>
+      To excel in National Cyber League, practice challenges in categories such as scanning, cryptography, forensics, networking, log analysis, web exploitation, and more. 
+      Review past game scenarios, build strong teamwork, and learn the tools used for reconnaissance and exploitation. 
+      Regular hands-on practice with CTF-style challenges improves confidence and efficiency during official rounds.
+    </p>
   </div>
 
+  <img src="Images/ncl_logo.png" alt="NCL Logo" class="cyber-image">
+</div>
+
+<div class="dropdown-section">
+
+  <button class="dropdown-toggle" style="margin-top: 50px">Open Source Intelligence (OSINT)</button>
+  <div class="dropdown-content">
+    <p>Guides and tips for Open Source Intelligence challenges in NCL.</p>
+  </div>
+
+  <button class="dropdown-toggle">Cryptography</button>
+  <div class="dropdown-content">
+    <p>Guides and resources for cryptography challenges in NCL.</p>
+  </div>
+
+  <button class="dropdown-toggle">Log Analysis</button>
+  <div class="dropdown-content">
+    <p>Resources for analyzing logs and identifying security events.</p>
+  </div>
+
+  <button class="dropdown-toggle">Network Traffic Analysis</button>
+  <div class="dropdown-content">
+    <p>Guides for capturing and analyzing network traffic in NCL challenges.</p>
+  </div>
+
+  <button class="dropdown-toggle">Scanning & Recon</button>
+  <div class="dropdown-content">
+    <p>Resources for reconnaissance and scanning challenges in NCL.</p>
+  </div>
+
+  <button class="dropdown-toggle">Forensics</button>
+  <div class="dropdown-content">
+    <p>Resources for forensic challenges, including disk and memory analysis.</p>
+  </div>
+
+  <button class="dropdown-toggle">Password Cracking</button>
+  <div class="dropdown-content">
+    <p>Guides and tips for password cracking challenges in NCL.</p>
+  </div>
+
+  <button class="dropdown-toggle">Enumeration and Exploitation</button>
+  <div class="dropdown-content">
+    <p>Resources for enumeration of systems and exploitation challenges.</p>
+  </div>
+
+  <button class="dropdown-toggle">Web Application Security</button>
+  <div class="dropdown-content">
+    <p>Guides for web app security challenges, including XSS, SQLi, and others.</p>
+  </div>
+
+</div>
+
+<br>
+<hr>
+<p style="display: flex; text-align: center; justify-content: center;"> Website Built by President David Slowik </p>
+
 <script>
+  // Dropdown toggle
+  document.querySelectorAll('.dropdown-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  // Search functionality
+  const contentDiv = document.getElementById('searchable-content');
+  const originalHTML = contentDiv.innerHTML;
+
   document.getElementById('search-toggle').addEventListener('click', function () {
     const form = document.getElementById('search-form');
     form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
   });
+
+  document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const query = this.querySelector('input[type="text"]').value.trim().toLowerCase();
+    if (!query) {
+      contentDiv.innerHTML = originalHTML;
+      return;
+    }
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
+    contentDiv.innerHTML = originalHTML.replace(regex, '<mark>$1</mark>');
+  });
 </script>
+
 </body>
 </html>
